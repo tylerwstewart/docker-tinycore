@@ -1,4 +1,4 @@
-IMAGE_NAME := tinycore
+IMAGE_NAME := tylerwstewart/tetr
 IMAGE_TAG := 10.0-x86
 TMP_IMAGE_NAME := $(IMAGE_NAME)-tar-builder
 TMP_CONTAINER_NAME := $(IMAGE_NAME)-tar-exporter

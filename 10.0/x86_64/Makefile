@@ -1,4 +1,4 @@
-IMAGE_NAME := tinycore
+IMAGE_NAME := tylerwstewart/tetr
 IMAGE_TAG := 10.0-x86_64
 TMP_IMAGE_NAME := $(IMAGE_NAME)-tar-builder
 TMP_CONTAINER_NAME := $(IMAGE_NAME)-tar-exporter
@@ -9,6 +9,7 @@ all: build
 
 build: rootfs64.tar.gz
 	docker build -t $(IMAGE_NAME):$(IMAGE_TAG) .
+
 
 rootfs64.tar.gz: squashfs-tools.tar.gz
 	docker build -t $(TMP_IMAGE_NAME) src

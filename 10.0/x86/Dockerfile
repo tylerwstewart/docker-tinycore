@@ -11,5 +11,7 @@ RUN mkdir -p /tmp/tce/optional \
     && ldconfig \
     && setupHome
 
+ENV PATH "/usr/local/include/openssl:${PATH}"
+
 USER tc
 CMD ["/bin/sh"]
