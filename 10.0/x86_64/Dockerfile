@@ -13,6 +13,4 @@ RUN mkdir -p /tmp/tce/optional \
 
 USER tc
 
-ENV PATH "/usr/local/include/openssl:${PATH}"
-
 CMD ["/bin/sh"]
