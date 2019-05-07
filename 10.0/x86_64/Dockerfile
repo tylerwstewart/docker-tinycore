@@ -12,4 +12,7 @@ RUN mkdir -p /tmp/tce/optional \
     && setupHome
 
 USER tc
+
+ENV PATH "/usr/local/include/openssl:${PATH}"
+
 CMD ["/bin/sh"]

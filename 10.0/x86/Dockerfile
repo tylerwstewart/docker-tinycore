@@ -9,9 +9,8 @@ RUN mkdir -p /tmp/tce/optional \
     && echo -n tc > etc/sysconfig/tcuser \
     && . /etc/init.d/tc-functions \
     && ldconfig \
-    && setupHome
-
-ENV PATH "/usr/local/include/openssl:${PATH}"
+    && setupHome \
+    && echo 'export PATH="/usr/local/include/openssl:${PATH}"' >> /home/tc/.ashrc
 
 USER tc
 CMD ["/bin/sh"]
